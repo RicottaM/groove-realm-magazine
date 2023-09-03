@@ -1,0 +1,8 @@
+# Files
+.env
+*.sqlite*
+
+# Directories
+.idea
+node_modules
+dist
