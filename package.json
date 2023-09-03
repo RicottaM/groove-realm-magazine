@@ -1,0 +1,11 @@
+{
+  "name": "groove-realm-magazine",
+  "version": "1.0.0",
+  "description": "Fullstack web application serving as an online music store, built with Node.js, React, and PostgreSQL.",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michał Jaskulski",
+  "license": "ISC",
+  "packageManager": "npm@9.6.7"
+}
