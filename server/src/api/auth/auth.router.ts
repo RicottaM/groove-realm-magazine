@@ -7,11 +7,13 @@ const { validate } = new Validator({});
 const authRouter = Router();
 
 authRouter.post("/login", authController.login);
+
 authRouter.post(
   "/new-user",
   validate({ body: userCreatedSchema }),
   authController.addUser
 );
+
 authRouter.get("/users", authController.getUsers);
 
 export default authRouter;

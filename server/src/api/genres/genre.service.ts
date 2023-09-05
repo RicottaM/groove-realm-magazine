@@ -27,11 +27,7 @@ export const genreService = {
     return { genres };
   },
   create: async (genreCreated: GenreCreated) => {
-    const genre = await Genre.query().insert(genreCreated).returning("*");
-
-    if (!genre) {
-      throw new ErrorWithStatus(`Couldn't create new genre.`, 404);
-    }
+    await Genre.query().insert(genreCreated);
 
     return {
       message: "Genre has been added.",
