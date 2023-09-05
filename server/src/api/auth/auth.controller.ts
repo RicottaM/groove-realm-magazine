@@ -18,7 +18,7 @@ export const authController = {
 
       res.cookie("token", token, { maxAge: cookieAge, httpOnly: true });
 
-      res.json({ message: "Login successful.", user, token });
+      res.json({ message: "Login successful.", user });
     } catch (error) {
       next(error);
     }

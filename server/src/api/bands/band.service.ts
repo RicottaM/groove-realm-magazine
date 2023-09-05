@@ -23,11 +23,7 @@ export const bandService = {
     return { bands };
   },
   create: async (bandCreated: BandCreated) => {
-    const newBand = await Band.query().insert(bandCreated).returning("*");
-
-    if (!newBand) {
-      throw new ErrorWithStatus(`Couldn't add a new band.`, 404);
-    }
+    await Band.query().insert(bandCreated);
 
     return {
       message: "Band has been added.",
