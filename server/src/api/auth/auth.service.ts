@@ -1,8 +1,7 @@
 import { createHash } from "../../middleware/createHash";
 import { ErrorWithStatus } from "../../error/error-with-status";
-import { UserCreated } from "./users/user";
-import { User } from "./users/user.model";
-import bcrypt from "bcrypt";
+import { UserCreated } from "../users/user";
+import { User } from "../users/user.model";
 
 export const loginService = {
   getUser: async (email: string) => {

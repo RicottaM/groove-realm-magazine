@@ -24,5 +24,6 @@
   "scripts": {
     "dev": "nodemon ./src/server.ts",
     "seed": "npx knex seed:run --specific=initial_data.ts"
-  }
+  },
+  "packageManager": "npm@9.6.7"
 }
