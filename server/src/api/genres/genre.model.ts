@@ -4,6 +4,9 @@ import { Band } from "../bands/band.model";
 export class Genre extends Model {
   static tableName = "genres";
 
+  declare id: number;
+  declare name: string;
+
   static relationMappings = {
     products: {
       relation: Model.ManyToManyRelation,
