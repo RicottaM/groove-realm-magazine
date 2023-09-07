@@ -6,13 +6,13 @@ passwordSchema
   .is()
   .min(8) // minimum 8 length
   .has()
-  .uppercase() // Must have uppercase letters
+  .uppercase() // must have uppercase letters
   .has()
-  .lowercase() // Must have lowercase letters
+  .lowercase() // must have lowercase letters
   .has()
   .digits(1) // must have at least 1 digit
   .has()
   .not()
-  .spaces(); // must contain spcaes
+  .spaces(); // must not containt spaces
 
 export default passwordSchema;

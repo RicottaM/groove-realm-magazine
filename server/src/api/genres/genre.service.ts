@@ -16,9 +16,7 @@ export const genreService = {
     return { genre };
   },
   readAll: async () => {
-    const genres = await Genre.query().throwIfNotFound({
-      message: `Couldn't find any genre.`,
-    });
+    const genres = await Genre.query();
 
     if (!genres) {
       throw new ErrorWithStatus(`Couldn't find any genres.`, 404);

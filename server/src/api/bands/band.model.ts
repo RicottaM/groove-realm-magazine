@@ -3,6 +3,12 @@ import { Model, RelationMapping, ModelClassSpecifier } from "objection";
 export class Band extends Model {
   static tableName = "bands";
 
+  declare id: number;
+  declare name: string;
+  declare formedYear: number;
+  declare description: string;
+  declare country: string;
+
   static relationMappings = {};
 
   static setupRelation(category: ModelClassSpecifier) {
