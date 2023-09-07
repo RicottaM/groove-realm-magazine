@@ -1,9 +1,9 @@
 export interface Album {
   id: number;
-  name: string;
-  formedYear: number;
+  title: string;
+  releaseYear: number;
+  bandId: number;
   description: string;
-  country: string;
 }
 
 export type AlbumCreated = Omit<Album, "id">;
