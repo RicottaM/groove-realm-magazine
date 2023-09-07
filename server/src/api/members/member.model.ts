@@ -11,7 +11,7 @@ export class Member extends Model {
   declare description: string;
 
   static relationMappings = {
-    products: {
+    bands: {
       relation: Model.ManyToManyRelation,
       modelClass: Band,
       join: {
