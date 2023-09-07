@@ -3,9 +3,18 @@ import type { AllowedSchema } from "express-json-validator-middleware";
 export const memberCreatedSchema: AllowedSchema = {
   type: "object",
   additionalProperties: false,
-  required: ["name"],
+  required: ["name", "instrument", "birth", "description"],
   properties: {
     name: {
+      type: "string",
+    },
+    instrument: {
+      type: "string",
+    },
+    description: {
+      type: "string",
+    },
+    birth: {
       type: "string",
     },
   },
