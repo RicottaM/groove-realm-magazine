@@ -1,5 +1,5 @@
 import { Model, RelationMapping, ModelClassSpecifier } from "objection";
-import { Category } from "../categories/category.model";
+import { Genre } from "../genres/genre.model";
 
 export class Band extends Model {
   static tableName = "bands";
@@ -12,20 +12,20 @@ export class Band extends Model {
 
   static relationMappings = {};
 
-  static setupRelation(category: ModelClassSpecifier) {
+  static setupRelation(genre: ModelClassSpecifier) {
     const relationMappings: Record<string, RelationMapping<Model>> = {};
 
-    if (category) {
-      relationMappings.category = {
+    if (genre) {
+      relationMappings.genre = {
         relation: Model.ManyToManyRelation,
-        modelClass: Category,
+        modelClass: Genre,
         join: {
           from: "bands.id",
           through: {
-            from: "bands_categories.band_id",
-            to: "bands_categories.category_id",
+            from: "bands_genres.band_id",
+            to: "bands_genres.genre_id",
           },
-          to: "categories.id",
+          to: "genres.id",
         },
       };
     }
