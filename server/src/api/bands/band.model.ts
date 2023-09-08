@@ -1,4 +1,5 @@
 import { Model, RelationMapping, ModelClassSpecifier } from "objection";
+import { Category } from "../categories/category.model";
 
 export class Band extends Model {
   static tableName = "bands";
