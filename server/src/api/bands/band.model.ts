@@ -17,14 +17,14 @@ export class Band extends Model {
     if (category) {
       relationMappings.category = {
         relation: Model.ManyToManyRelation,
-        modelClass: category,
+        modelClass: Category,
         join: {
           from: "bands.id",
           through: {
             from: "bands_categories.band_id",
             to: "bands_categories.category_id",
           },
-          to: "category.id",
+          to: "categories.id",
         },
       };
     }
